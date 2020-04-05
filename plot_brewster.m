@@ -21,8 +21,8 @@ figure
 plot(theta,abs(fresnel_h))
 hold on
 plot(theta,abs(fresnel_v))
-xline(minTheta)
-yline(0)
+xline(minTheta);
+yline(0);
 scatter(minTheta,minFv,'r','LineWidth',2)
 hold off
 xticks(0:pi/8:pi/2)
@@ -32,14 +32,14 @@ title('Magnitude of the Fresnel Reflection Coefficients')
 xlabel('\theta_i [rad]')
 ylabel('|\Gamma|')
 legend({'|\Gamma_H|','|\Gamma_V|'})
-text(minTheta+0.02,minFv+0.05,['Brewster''s Angle = ',num2str(minTheta/pi),'\pi rad'])
+text(minTheta+0.02,minFv+0.05,[sprintf('Brewster''s Angle =\n'),num2str(minTheta/pi),'\pi rad'])
 
 figure
 plot(theta,angle(fresnel_h))
 hold on
 plot(theta,angle(fresnel_v))
-xline(minTheta)
-yline(0)
+xline(minTheta);
+yline(0);
 hold off
 xticks(0:pi/8:pi/2)
 yticks(-pi:pi/2:pi)
