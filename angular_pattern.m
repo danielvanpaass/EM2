@@ -9,10 +9,11 @@ k = 2*pi / c * f;
 R1 = 2*sqrt(H*H+0.25*R0*R0);
 dR = R1-R0;
 
+% Polarization ratio of the wave, including reflected wave
 p1 = polarization_phasor(phiw, tau);
 p1 = p1.*(1 + fresnel_v.*exp(1j.*k.*dR))./(1 + fresnel_h.*exp(1j.*k.*dR));
+% Polarization ratio of the receiving antenna
 p2 = polarization_phasor(phia,0);
-p2 = p2.*(1 + fresnel_v.*exp(1j.*k.*dR))./(1 + fresnel_h.*exp(1j.*k.*dR));
 
 rho = ((1+p1.*p2).*(1+conj(p1).*conj(p2)))./((1+p1.*conj(p1)).*(1+p2.*conj(p2)));
 
