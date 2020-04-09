@@ -18,5 +18,6 @@ p2 = polarization_phasor(phia,0);
 rho = ((1+p1.*p2).*(1+conj(p1).*conj(p2)))./((1+p1.*conj(p1)).*(1+p2.*conj(p2)));
 
 polarplot(phia, rho);
+title('Polar Plot of Angular Pattern')
 
 end
