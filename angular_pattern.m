@@ -1,6 +1,6 @@
 function angular_pattern(f,R0, H, tau, phiw, epsilon1, epsilon2)
 phia = linspace(-pi,pi,100);
-theta_i = 0.5*pi - atan(2*H / (R0));%klopt dit?
+theta_i = 0.5*pi - atan(2*H / (R0));
 [fresnel_h,fresnel_v] = Fresnel_reflection(epsilon1,epsilon2,theta_i);
 
 c = 299792458;
